@@ -145,14 +145,12 @@ if uploaded_file:
             chunk_summarize_prompt = PromptTemplate(
                 input_variables=["context"],
                 template=(
-                   "You are a professional document summarizer.\n\n"
-                    "Summarize the following text into clear, well-structured paragraphs.\n"
-                    "Ensure the summary is neatly formatted with proper line breaks and spacing.\n"
-                    "Each key topic should be explained in its own short paragraph — concise, factual, and easy to read.\n"
-                    "Do NOT include bullet points, headers, or repeated phrases.\n"
-                    "Focus only on the essential ideas, keeping the flow natural and coherent.\n\n"
+                    "Summarize the following text into clear, concise paragraphs. "
+                    "Focus on the main ideas and present them in a natural, easy-to-read style. "
+                    "Do not use bullet points, headers, or repeated phrases. "
+                    "Format the summary as well-structured paragraphs with proper line breaks and spacing.\n\n"
                     "Text:\n{context}\n\n"
-                    "Summary (in clean, paragraph format):"
+                    "Summary:"
                 )
             )
 
