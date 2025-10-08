@@ -98,12 +98,13 @@ if uploaded_file:
     qa_prompt = PromptTemplate(
         input_variables=["context", "question"],
         template=(
-            "You are a helpful and fact-based QA assistant.\n\n"
-            "Use ONLY the information from the context below to answer the question.\n"
-            "If the context does not clearly contain the answer, reply exactly with:\n"
-            "\"Insufficient information in the provided context.\"\n\n"
-            "Be clear, concise, and strictly factual.\n"
-            "Do not add assumptions or outside knowledge.\n\n"
+            "You are a helpful assistant answering questions based strictly on the provided context.\n\n"
+            "Instructions:\n"
+            "- Use only the information from the context below to answer the question.\n"
+            "- If the answer is not clearly found in the context, reply exactly with:\n"
+            "\"Insufficient information in the provided context.\"\n"
+            "- Be concise and factual. Do not add assumptions or outside knowledge.\n\n"
+            "-response politely and professionally.\n\n"
             "Context:\n{context}\n\n"
             "Question:\n{question}\n\n"
             "Answer:"

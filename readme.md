@@ -1,5 +1,8 @@
 # PDF Question-Answering and Summarization System
 
+System UI
+![Streamlit App Screenshot](systemui.png)
+
 A sophisticated document analysis application that combines state-of-the-art language models and document processing to provide intelligent question-answering and summarization capabilities for PDF documents.
 
 ## 🌟 Features
